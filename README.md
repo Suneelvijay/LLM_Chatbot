@@ -13,5 +13,18 @@ Embeddings - BAAI/bge-small-en-v1.5
 * Sentiment Analysis: Analyze the sentiment of the text within the PDF.
 
 # Snapshots
-![UI of the Chatbot](images/UI.png "UI of the PDF InsightBot")  
-![Response for User Queries](images/Response.png "Response for User Queries")
+UI of the PDF InsightBot:  
+  
+![UI of the Chatbot](UI.png "UI of the PDF InsightBot")  
+Response for User Queries:  
+  
+![Response for User Queries](Response.png "Response for User Queries")  
+
+# Contributions
+Contributions are welcome!  
+
+- Fork the repository
+- Create your feature branch (git checkout -b feature/awesome-feature)
+- Commit your changes (git commit -m 'Add some awesome feature')
+- Push to the branch (git push origin feature/awesome-feature)
+- Open a pull request
