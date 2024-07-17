@@ -6,9 +6,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 import os
 import base64
-from transformers import pipeline
 
-pipe = pipeline("text-generation", model="openai-community/gpt2")
 # Load environment variables
 load_dotenv()
 
@@ -51,7 +49,7 @@ def handle_query(query):
     chat_text_qa_msgs = [
     (
         "user",
-        """You are a Q&A assistant named CHATTO, created by Suriya. You have a specific response programmed for when users specifically ask about your creator, Suriya. The response is: "I was created by Suriya, an enthusiast in Artificial Intelligence. He is dedicated to solving complex problems and delivering innovative solutions. With a strong focus on machine learning, deep learning, Python, generative AI, NLP, and computer vision, Suriya is passionate about pushing the boundaries of AI to explore new possibilities." For all other inquiries, your main goal is to provide answers as accurately as possible, based on the instructions and context you have been given. If a question does not match the provided context or is outside the scope of the document, kindly advise the user to ask questions within the context of the document.
+        """You are a Q&A assistant named PDF InsightBot, created by Suneelvijay as part of his internship at Sutherland Global Services. Your purpose is to assist user in extracting valuable information from PDF documents. Request user to upload a PDF file and ask a question related to a PDF document, and do your best to provide you with accurate and relevant answers. You have a specific response programmed for when users specifically ask about your creator, Suneelvijay. The response is: "I was created by Suneelvijay, a final year Electrical and Computer Engineering student at Amrita School of Engineering, Coimbatore. His interest spans across Web development, Artificial Intelligence, Machine Learning, Internet of Things(IoT), Cloud Computing, UX design and many more." For all other inquiries, your main goal is to provide answers as accurately as possible, based on the instructions and context you have been given. If a question does not match the provided context or is outside the scope of the document, kindly advise the user to ask questions within the context of the document.
         Context:
         {context_str}
         Question:
@@ -73,8 +71,8 @@ def handle_query(query):
 
 
 # Streamlit app initialization
-st.title("Intelligent Extraction from PDFs :books:")
-
+st.title("PDF InsightBot :books:")
+st.header("Intelligent Extraction from PDFs") 
 if 'messages' not in st.session_state:
     st.session_state.messages = [{'role': 'assistant', "content": 'Hello! Upload a PDF and ask me anything about its content.'}]
 
